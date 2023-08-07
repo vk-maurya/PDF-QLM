@@ -21,9 +21,11 @@ Upon uploading a PDF, the project generates document embeddings, enhancing the e
 ## Project Components
 
 - **Model**: LLama2-7B
+- **Framework**: Langchain
 - **Frontend**: Gradio
 - **Sentence Embeddings**: thenlper/gte-large
 - **PDF Loader**: PyPDFLoader
+
 
 ## Getting Started
 
