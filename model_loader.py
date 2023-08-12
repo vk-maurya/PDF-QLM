@@ -10,7 +10,7 @@ class ModelLoader:
     A class responsible for loading the language model.
     """
 
-    def __init__(self, model_id, max_length, temperature):
+    def __init__(self, model_id, max_length, temperature,load_int8):
         """
         Initialize the ModelLoader instance.
 
@@ -22,6 +22,7 @@ class ModelLoader:
         self.model_id = model_id
         self.max_length = max_length
         self.temperature = temperature
+        self.load_int8 = load_int8
         
     def load_model(self):
         """
@@ -32,7 +33,11 @@ class ModelLoader:
         """
         logger.info(f"Loading LLM model {self.model_id} with max_length {self.max_length} and temperature {self.temperature}...\n")
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-        model = AutoModelForCausalLM.from_pretrained(self.model_id, torch_dtype=torch.bfloat16, device_map="auto")
+        if self.load_int8:
+            model = AutoModelForCausalLM.from_pretrained(self.model_id, load_in_8bit=True, device_map="auto")
+        else:
+            model = AutoModelForCausalLM.from_pretrained(self.model_id, torch_dtype=torch.bfloat16, device_map="auto")
+        
         logger.info("Model is loaded successfully\n")
         pipe = pipeline(
             "text-generation", model=model, tokenizer=tokenizer, max_length=self.max_length, temperature=self.temperature

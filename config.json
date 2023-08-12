@@ -4,5 +4,6 @@
     "chunk_size": 500,
     "chunk_overlap": 50,
     "max_length": 2000,
-    "temperature": 0.05
+    "temperature": 0.05,
+    "load_int8":true
   }  
