@@ -16,7 +16,7 @@ This project enables you to pose questions as if you're conversing with a person
 
 Note : If you utilize a quantized LLAMA model, the outcomes might contrast when compared to results achieved using `FP16` or `FP32` models. When working with Colab, you have the option to employ `load_int8:true` in the configuration file.
 
-You can try using colab notebook : <a target="_blank" href="https://colab.research.google.com/github/https://colab.research.google.com/drive/1KT1McE-o0DPxw_4VYKgvYEGQBInkMtuQ?usp=sharing">
+You can try using colab notebook : <a target="_blank" href="https://colab.research.google.com/drive/1KT1McE-o0DPxw_4VYKgvYEGQBInkMtuQ?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
