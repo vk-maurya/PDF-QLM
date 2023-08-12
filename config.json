@@ -1,5 +1,5 @@
 {
-    "embedding_model_name": "thenlper/gte-large",
+    "embedding_model_name": "thenlper/gte-base",
     "model_id": "meta-llama/Llama-2-7b-chat-hf",
     "chunk_size": 500,
     "chunk_overlap": 50,

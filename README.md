@@ -12,7 +12,15 @@ Gone are the days of reading through entire documents. With this you can effortl
 
 ### Quick Q&A
 
-this project enables you to pose questions as if you're conversing with a person. The system intelligently extracts the right answers from your PDFs, eliminating the need for manual searches through lengthy documents.
+This project enables you to pose questions as if you're conversing with a person. The system intelligently extracts the right answers from your PDFs, eliminating the need for manual searches through lengthy documents.
+
+Note : If you utilize a quantized LLAMA model, the outcomes might contrast when compared to results achieved using `FP16` or `FP32` models. When working with Colab, you have the option to employ `load_int8:true` in the configuration file.
+
+You can try using colab notebook : <a target="_blank" href="https://colab.research.google.com/github/https://colab.research.google.com/drive/1KT1McE-o0DPxw_4VYKgvYEGQBInkMtuQ?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+![alt text](img/PDFQA.png)
 
 ### Embedding Loading
 
@@ -37,5 +45,4 @@ To start using this project, follow these steps:
 
 ---
 
-*Note: While I achieved improved results using the LLama2-7B LLM, you have the option to experiment with alternative models by simply modifying the model name within the configuration file.
-
+*Note:You have the flexibility to select different sentence embeddings and LLM models by just changing configure file.

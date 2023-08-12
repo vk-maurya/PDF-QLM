@@ -4,7 +4,7 @@ from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 import pickle
 import os
-from custom_logger import logger
+from utils.custom_logger import logger
 
 class DataLoadPDF:
     """

@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import torch
-from custom_logger import logger
+from utils.custom_logger import logger
 
 class ModelLoader:
     """
